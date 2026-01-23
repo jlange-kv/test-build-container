@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Secrets here!</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>No secrets here!</h1>
+        
+        <div class="interaction-area">
+            {% if show_secret %}
+                <!-- STATE: Secret Revealed -->
+                <div class="secret-display">
+                    {{ secret }}
+                </div>
+                <div style="margin-top: 1.5rem;">
+                    <a href="/" class="btn btn-no">Hide Secret</a>
+                </div>
+
+            {% else %}
+                <!-- STATE: Initial / Hidden -->
+                <!-- We use the HTML5 <details> tag for the native "roll down" effect without needing JS -->
+                <details>
+                    <summary>can I let you in on a secret?</summary>
+                    <div class="button-group">
+                        <a href="/yes" class="btn btn-yes">Yes</a>
+                        <!-- Clicking 'No' simply closes the details element natively -->
+                        <button class="btn btn-no" onclick="this.closest('details').removeAttribute('open')">No</button>
+                    </div>
+                </details>
+            {% endif %}
+        </div>
+    </div>
+
+</body>
+</html>

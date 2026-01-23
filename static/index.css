@@ -1,0 +1,79 @@
+/* static/index.css */
+
+/* Theme Variables for Index Page */
+body {
+    background-color: #f4f4f9;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.05rem;
+    color: #333;
+}
+
+.interaction-area {
+    margin-top: 2rem;
+}
+
+/* The Trigger and Details */
+details {
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+summary {
+    font-size: 1.1rem;
+    list-style: none;
+    color: #666;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary:hover {
+    color: #6c5ce7;
+}
+
+/* Buttons */
+.button-group {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.btn {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.btn-yes {
+    background-color: #6c5ce7;
+    color: white;
+}
+
+.btn-yes:hover {
+    background-color: #5649c0;
+}
+
+.btn-no {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.btn-no:hover {
+    background-color: #d0d0d0;
+}

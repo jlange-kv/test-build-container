@@ -1,0 +1,33 @@
+/* static/style.css */
+
+/* CSS Variables for Global Defaults */
+:root {
+    --font-main: system-ui, -apple-system, sans-serif;
+    --text-color: #333;
+}
+
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    /* This ensures both pages take up full height and center content */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Common Container Logic */
+.container {
+    max-width: 600px;
+    padding: 2rem;
+    width: 100%;
+}
